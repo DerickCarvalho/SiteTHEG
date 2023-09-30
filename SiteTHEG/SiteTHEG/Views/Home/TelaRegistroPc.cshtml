@@ -1,0 +1,39 @@
+<style>
+    .cadastropc{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .componente {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10%
+    }
+</style>
+
+
+<form class="cadastropc" method="post">
+
+    <label for="cpu">Processador:</label>
+    <input class="componente" type="text" id="cpu" name="processador" required>
+
+    <label for="gfcard">Placa de Vídeo:</label>
+    <input class="componente" type="text" id="gfcard" name="placaDeVideo" required>
+
+    <label for="mobo">Placa Mãe:</label>
+    <input class="componente" type="text" id="gfcard" name="placaMae" required>
+
+    <label for="ram">Memória Ram:</label>
+    <input class="componente" type="text" id="ram" name="memoriaRam" required>
+
+    <label for="fonte">Fonte de Alimentação</label>
+    <input class="componente" type="text" id="fonte" name="fonteAlimentacao" required>
+
+    <label for="hd">HD's</label>
+    <input class="componente" type="text" id="hd" name="hds" required>
+
+    <label for="ssd">SSD</label>
+    <input class="componente" type="text" id="ssd" name="ssd" required>
+
+    <input type="submit" value="Cadastrar Configuração">
+</form>
