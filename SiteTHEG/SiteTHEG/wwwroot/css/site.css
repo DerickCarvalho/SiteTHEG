@@ -1,18 +1,88 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --default-font: 'Gabarito', cursive;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+    color: #FFFFFF;
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: #222121;
 }
+
+footer {
+    background-color: #171616;
+}
+
+/* -----===[ TAGS DE USO GERAL ]===----- */
+
+.space {
+    padding: 20px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-row-left {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.flex-row-right {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.flex-row-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* -----===[ TAGS DE USO GERAL ]===----- */
