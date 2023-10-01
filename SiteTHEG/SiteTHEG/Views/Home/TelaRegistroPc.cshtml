@@ -11,29 +11,52 @@
     }
 </style>
 
+<h1>Registrar Configução</h1>
 
 <form class="cadastropc" method="post">
-
-    <label for="cpu">Processador:</label>
-    <input class="componente" type="text" id="cpu" name="processador" required>
-
-    <label for="gfcard">Placa de Vídeo:</label>
-    <input class="componente" type="text" id="gfcard" name="placaDeVideo" required>
-
-    <label for="mobo">Placa Mãe:</label>
-    <input class="componente" type="text" id="gfcard" name="placaMae" required>
-
-    <label for="ram">Memória Ram:</label>
-    <input class="componente" type="text" id="ram" name="memoriaRam" required>
-
-    <label for="fonte">Fonte de Alimentação</label>
-    <input class="componente" type="text" id="fonte" name="fonteAlimentacao" required>
-
-    <label for="hd">HD's</label>
-    <input class="componente" type="text" id="hd" name="hds" required>
-
-    <label for="ssd">SSD</label>
-    <input class="componente" type="text" id="ssd" name="ssd" required>
+    <div class="cpu">
+        <label for="cpu">Processador:</label>
+        <input class="componente" type="text" id="cpu" name="processador" required>
+    </div>
+    <div class="cpuCooler">
+        <label for="cpuCooler">Cooler do Processador:</label>
+        <input class="componente" type="text" id="cpuColler" name="coolerProcessador" required>
+    </div>
+    <div class="gfcard">
+        <label for="gfcard">Placa de Vídeo:</label>
+        <input class="componente" type="text" id="gfcard" name="placaDeVideo" required>
+    </div>
+    <div class="mobo">
+        <label for="mobo">Placa Mãe:</label>
+        <input class="componente" type="text" id="gfcard" name="placaMae" required>
+    </div>
+    <div class="ram">
+        <label for="ram">Memória RAM:</label>
+        <input class="componente" type="text" id="ram" name="memoriaRam" required>
+    </div>
+    <div class="fonte">
+        <label for="fonte">Fonte de Alimentação</label>
+        <input class="componente" type="text" id="fonte" name="fonteAlimentacao" required>
+    </div>
+    <div class="armazenamento">
+        <label for="armazenamento">Armazenamento:</label>
+        <select id="rom" name="armazamento" required>
+            <option value="selecione">Selecione o tipo:</option>
+            <option value="hd">HDD</option>
+            <option value="sdd">SSD Sata</option>
+            <option value="nvme">SSD NVMe</option>
+            <option value="outra">Outra:</option>
+        </select>
+        <input class="componente" type="text" id="hd" name="hds" required>
+        <legend>Ex.: 500Gb</legend>
+        <label>Adicionar outro:</label>
+        <input type="checkbox">
+    </div>
+    <div class="gabinete">
+        <label for="gabinete">Gabinete:</label>
+        <input class="componente" type="text" id="gabinete" required>
+    </div>
 
     <input type="submit" value="Cadastrar Configuração">
+    <input type="reset" value="Limpar">
 </form>
