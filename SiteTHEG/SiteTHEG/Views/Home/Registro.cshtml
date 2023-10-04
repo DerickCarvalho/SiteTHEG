@@ -2,12 +2,15 @@
     .login-header {
         background-color: #171616;
     }
+
     .logo {
         transition: linear transform 0.1s;
     }
+
     .logo a {
         text-decoration: none;
     }
+
     .logo:hover {
         cursor: pointer;
         transform: scale(1.05);
@@ -24,11 +27,11 @@
         outline: 0;
         border-radius: 10px;
         border: 0;
-        margin: 15px 0;
     }
 
     .login-input-div {
         width: 40%;
+        margin: 15px 0;
     }
 
     .fake-input {
@@ -46,7 +49,7 @@
     }
 
     .icon-fake-input {
-        width: 5%;
+        width: 30px;
         padding: 2px;
         transition: linear transform 0.2s;
     }
@@ -69,6 +72,7 @@
     .login-button:hover {
         background-color: #434343;
     }
+}
 </style>
 
 <header class="login-header flex-row-space-between space">
@@ -79,9 +83,14 @@
 
 <main class="flex-column-center">
 
-    <h1 class="login-title">LogIn</h1>
+    <h1 class="login-title">Registrar-se</h1>
 
     <form class="flex-column-center width-100">
+        <div class="login-input-div flex-column-left">
+            <label>Nome</label>
+            <input class="login-input" type="text" autocomplete="off" required maxlength="50" />
+        </div>
+
         <div class="login-input-div flex-column-left">
             <label>Usuário</label>
             <input class="login-input" type="text" autocomplete="off" required maxlength="50" />
@@ -91,19 +100,28 @@
             <label>Senha</label>
             <div class="fake-input flex-row-center">
                 <input id="pass-input" class="input-of-fake width-100" type="password" autocomplete="off" required maxlength="50" />
-                <img id="show-pass" class="icon-fake-input" src="~/imgs/eye.png"/>
+                <img id="show-pass" class="icon-fake-input" src="~/imgs/eye.png" />
+            </div>
+        </div>
+
+        <div class="login-input-div flex-column-left">
+            <label>Senha</label>
+            <div class="fake-input flex-row-center">
+                <input id="pass-input2" class="input-of-fake width-100" type="password" autocomplete="off" required maxlength="50" />
+                <img id="show-pass2" class="icon-fake-input" src="~/imgs/eye.png" />
             </div>
         </div>
 
         <button class="login-button">Login</button>
 
         <div class="flex-row-center">
-            <p>Ainda não possui cadastro? <a href="#">Cadastre-se</a></p>
+            <p>Já possui cadastro? <a href="#">LogIn</a></p>
         </div>
     </form>
 </main>
 
 <script>
+    // Input Pasword 01
     let passButton = document.getElementById('show-pass');
     let passInput = document.getElementById('pass-input');
     let bool = 0;
@@ -115,6 +133,21 @@
         } else {
             passInput.type = 'password';
             bool = 0;
+        }
+    });
+
+    // Input Pasword 02
+    let passButton2 = document.getElementById('show-pass2');
+    let passInput2 = document.getElementById('pass-input2');
+    let bool2 = 0;
+
+    passButton2.addEventListener('click', () => {
+        if (bool2 == 0) {
+            passInput2.type = 'text';
+            bool2 = 1;
+        } else {
+            passInput2.type = 'password';
+            bool2 = 0;
         }
     });
 </script>
