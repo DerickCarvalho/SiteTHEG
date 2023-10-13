@@ -1,0 +1,106 @@
+﻿<style>
+    .login-header {
+        background-color: #171616;
+    }
+
+    .logo {
+        transition: linear transform 0.1s;
+    }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+    .login-title {
+        padding-top: 100px;
+    }
+
+    .login-input {
+        color: #000000;
+        width: 100%;
+        padding: 5px;
+        outline: 0;
+        border-radius: 10px;
+        border: 0;
+    }
+
+    .login-input-div {
+        width: 40%;
+        margin: 15px 0;
+    }
+
+    .fake-input {
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .input-of-fake {
+        color: #000000;
+        outline: 0;
+        border: 0;
+        border-right: 2px solid #171616;
+    }
+
+    .icon-fake-input {
+        width: 30px;
+        padding: 2px;
+        transition: linear transform 0.2s;
+    }
+
+        .icon-fake-input:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+    .login-button {
+        margin: 20px;
+        padding: 10px 30px;
+        background-color: #171616;
+        border: 0;
+        border-radius: 10px;
+        font-size: 20px;
+        transition: linear background-color 0.2s;
+    }
+
+        .login-button:hover {
+            background-color: #434343;
+        }
+
+    }
+</style>
+
+<header class="login-header flex-row-space-between space">
+    <div class="logo flex-row-center">
+        <a asp-controller="Home" asp-action="Login"><h1>THEG</h1></a>
+    </div>
+</header>
+
+<main class="flex-column-center">
+    <h1 class="login-title">Vizualizar perfil</h1>
+
+    <img style="border-radius:500px; width:150px; margin:20px; border:3.3px solid #171616;" src="/imgs/profile.png" alt="Foto do perfil do usuario" />
+    <form class="flex-column-center width-100">
+        <div class="login-input-div flex-column-left">
+            <label>Insira URL da foto do perfil:</label>
+            <input class="login-input" type="text" autocomplete="off" maxlength="50" />
+        </div>
+        <div class="login-input-div flex-column-left">
+            <label>Editar nome de exibição:</label>
+            <input class="login-input" type="text" autocomplete="off" maxlength="50" />
+        </div>
+
+        <div>
+            <button onmouseover="this.style.color='#00ff00'" onmouseout="this.style.color='#ffffff'" class="login-button">Confirmar </button>
+            <button onmouseover="this.style.color='#0073ff'" onmouseout="this.style.color='#ffffff'" class="login-button">Registrar PC</button>
+            <button onmouseover="this.style.color='#fc1703'" onmouseout="this.style.color='#ffffff'" class="login-button">LogOut</button>
+        </div>
+
+    </form>
+</main>

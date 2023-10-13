@@ -73,22 +73,22 @@
 
 <header class="login-header flex-row-space-between space">
     <div class="logo flex-row-center">
-        <a href=""><h1>THEG</h1></a>
+        <a asp-controller="Home" asp-action="Index"><h1>THEG</h1></a>
     </div>
 </header>
 
 <main class="flex-column-center">
 
-    <h1 class="login-title">LogIn</h1>
+    <h1 class="login-title">Login</h1>
 
     <form class="flex-column-center width-100">
         <div class="login-input-div flex-column-left">
-            <label>Usuário</label>
+            <label>Usuário:</label>
             <input class="login-input" type="text" autocomplete="off" required maxlength="50" />
         </div>
 
         <div class="login-input-div flex-column-left">
-            <label>Senha</label>
+            <label>Senha:</label>
             <div class="fake-input flex-row-center">
                 <input id="pass-input" class="input-of-fake width-100" type="password" autocomplete="off" required maxlength="50" />
                 <img id="show-pass" class="icon-fake-input" src="~/imgs/eye.png"/>
@@ -98,7 +98,7 @@
         <button class="login-button">Login</button>
 
         <div class="flex-row-center">
-            <p>Ainda não possui cadastro? <a href="#">Cadastre-se</a></p>
+            <p>Ainda não possui cadastro? <a asp-controller="Home" asp-action="Registro">Cadastre-se</a></p>
         </div>
     </form>
 </main>
